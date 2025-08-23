@@ -1,6 +1,7 @@
 import fs from "fs";
-import path from "path";
+import http from "http";
 import nodeCron from "node-cron";
+import path from "path";
 import { env } from "./config/env";
 import { CultFitService } from "./services/cultFitService";
 
@@ -115,3 +116,10 @@ nodeCron.schedule(
 );
 
 console.log("I am running");
+
+const server = http.createServer((req, res) => {
+  res.end("Service running");
+});
+
+const port = process.env.PORT || 3000;
+server.listen(port, () => console.log(`Listening on port ${port}`));
