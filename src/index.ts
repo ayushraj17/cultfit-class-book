@@ -78,9 +78,10 @@ async function main(): Promise<boolean> {
   }
 }
 
-// Schedule cron at 10:00 PM IST daily
+// This will run at 9:30 AM PDT (Oregon time) daily,
+// which corresponds to 10:00 PM IST
 nodeCron.schedule(
-  "0 22 * * *",
+  "30 9 * * *", // minute hour day month weekday
   () => {
     cleanupOldLogs(); // remove old logs
     log("Starting repeated job at 10:00 PM IST...");
@@ -108,5 +109,7 @@ nodeCron.schedule(
       clearInterval(intervalId);
     }, 5 * 60 * 1000); // max 5 minutes
   },
-  { timezone: "Asia/Kolkata" }
+  {
+    timezone: "America/Los_Angeles",
+  }
 );
