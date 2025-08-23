@@ -113,3 +113,5 @@ nodeCron.schedule(
     timezone: "America/Los_Angeles",
   }
 );
+
+console.log("I am running");
