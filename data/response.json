@@ -1,0 +1,1708 @@
+{
+  "title": "Cult Wakad (Hybrid)",
+  "header": {
+    "widgetType": "HEADER",
+    "title": "Cult Wakad (Hybrid)",
+    "image": "v1/cult-media/v2web/centers/center_1263_IMAGE_f6f81638-e29d-4ac6-8105-2c1e82c0bcc6.png",
+    "creditData": null
+  },
+  "days": [
+    {
+      "id": "2025-08-22",
+      "day": "22",
+      "month": "Aug"
+    },
+    {
+      "id": "2025-08-23",
+      "day": "23",
+      "month": "Aug"
+    },
+    {
+      "id": "2025-08-24",
+      "day": "24",
+      "month": "Aug"
+    },
+    {
+      "id": "2025-08-25",
+      "day": "25",
+      "month": "Aug"
+    }
+  ],
+  "workoutFilters": [
+    {
+      "id": 8,
+      "name": "Boxing",
+      "displayText": "Boxing"
+    },
+    {
+      "id": 66,
+      "name": "Burn",
+      "displayText": "Burn"
+    },
+    {
+      "id": 56,
+      "name": "Dance",
+      "displayText": "Dance"
+    },
+    {
+      "id": 69,
+      "name": "Strength",
+      "displayText": "Strength"
+    },
+    {
+      "id": 98,
+      "name": "Weekends at Cult",
+      "displayText": "Weekends at Cult"
+    },
+    {
+      "id": 5,
+      "name": "Yoga",
+      "displayText": "Yoga"
+    }
+  ],
+  "classByDateList": [
+    {
+      "id": "2025-08-22",
+      "widgetType": "BROWSE_CLASS_LIST",
+      "classByTimeList": [
+        {
+          "id": "17:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7180159",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "17:00:00",
+              "endTime": "17:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040149",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "17:30:00",
+              "endTime": "18:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040150",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "18:00:00",
+              "endTime": "18:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040151",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "18:30:00",
+              "endTime": "19:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040152",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "19:00:00",
+              "endTime": "19:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040153",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "19:30:00",
+              "endTime": "20:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040154",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "20:00:00",
+              "endTime": "20:50:00",
+              "workoutId": 66,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BURN",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040155",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "20:30:00",
+              "endTime": "21:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "21:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7180160",
+              "productType": "FITNESS",
+              "date": "2025-08-22",
+              "startTime": "21:00:00",
+              "endTime": "21:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        }
+      ]
+    },
+    {
+      "id": "2025-08-23",
+      "widgetType": "BROWSE_CLASS_LIST",
+      "classByTimeList": [
+        {
+          "id": "06:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040156",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "06:00:00",
+              "endTime": "06:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "06:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040157",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "06:30:00",
+              "endTime": "07:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HATHA YOGA SPECIAL",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "07:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7143868",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "07:00:00",
+              "endTime": "07:50:00",
+              "workoutId": 8,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BOXING BAG WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            },
+            {
+              "id": "7040158",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "07:00:00",
+              "endTime": "07:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "07:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040160",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "07:30:00",
+              "endTime": "08:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "08:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040161",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "08:00:00",
+              "endTime": "08:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            },
+            {
+              "id": "7143869",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "08:00:00",
+              "endTime": "08:50:00",
+              "workoutId": 8,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BOXING BAG WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "08:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040163",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "08:30:00",
+              "endTime": "09:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "EVOLVE YOGA",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "09:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040164",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "09:00:00",
+              "endTime": "09:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            },
+            {
+              "id": "7143870",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "09:00:00",
+              "endTime": "09:50:00",
+              "workoutId": 8,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BOXING BAG WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "09:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040166",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "09:30:00",
+              "endTime": "10:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "10:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7174578",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "10:00:00",
+              "endTime": "11:30:00",
+              "workoutId": 98,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "WKNDS AT CULT - CIRCUIT X CENTRUM",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "10:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040168",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "10:30:00",
+              "endTime": "11:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HATHA YOGA SPECIAL",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "11:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040169",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "11:30:00",
+              "endTime": "12:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "16:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040170",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "16:30:00",
+              "endTime": "17:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040171",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "17:00:00",
+              "endTime": "17:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040172",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "17:30:00",
+              "endTime": "18:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040173",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "18:00:00",
+              "endTime": "18:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040174",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "18:30:00",
+              "endTime": "19:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HATHA YOGA SPECIAL",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7143828",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "19:00:00",
+              "endTime": "19:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040176",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "19:30:00",
+              "endTime": "20:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040177",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "20:00:00",
+              "endTime": "20:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040178",
+              "productType": "FITNESS",
+              "date": "2025-08-23",
+              "startTime": "20:30:00",
+              "endTime": "21:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "EVOLVE YOGA",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        }
+      ]
+    },
+    {
+      "id": "2025-08-24",
+      "widgetType": "BROWSE_CLASS_LIST",
+      "classByTimeList": [
+        {
+          "id": "06:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7180165",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "06:00:00",
+              "endTime": "06:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "07:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040180",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "07:00:00",
+              "endTime": "07:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "07:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040181",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "07:30:00",
+              "endTime": "08:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HATHA YOGA SPECIAL",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "08:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040182",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "08:00:00",
+              "endTime": "08:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "08:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040183",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "08:30:00",
+              "endTime": "09:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "09:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040184",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "09:00:00",
+              "endTime": "09:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "09:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040185",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "09:30:00",
+              "endTime": "10:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "EVOLVE YOGA",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "10:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7180166",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "10:00:00",
+              "endTime": "10:50:00",
+              "workoutId": 66,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BURN",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "10:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040186",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "10:30:00",
+              "endTime": "11:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "11:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7180167",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "11:00:00",
+              "endTime": "11:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "11:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040187",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "11:30:00",
+              "endTime": "12:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HATHA YOGA SPECIAL",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7180168",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "17:00:00",
+              "endTime": "17:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040188",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "17:30:00",
+              "endTime": "18:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "EVOLVE YOGA",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040189",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "18:00:00",
+              "endTime": "18:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040190",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "18:30:00",
+              "endTime": "19:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040191",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "19:00:00",
+              "endTime": "19:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040192",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "19:30:00",
+              "endTime": "20:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HATHA YOGA SPECIAL",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040193",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "20:00:00",
+              "endTime": "20:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040194",
+              "productType": "FITNESS",
+              "date": "2025-08-24",
+              "startTime": "20:30:00",
+              "endTime": "21:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        }
+      ]
+    },
+    {
+      "id": "2025-08-25",
+      "widgetType": "BROWSE_CLASS_LIST",
+      "classByTimeList": [
+        {
+          "id": "06:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040195",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "06:30:00",
+              "endTime": "07:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "EVOLVE YOGA",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "07:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040196",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "07:00:00",
+              "endTime": "07:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            },
+            {
+              "id": "7143871",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "07:00:00",
+              "endTime": "07:50:00",
+              "workoutId": 8,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BOXING BAG WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "07:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040198",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "07:30:00",
+              "endTime": "08:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "DANCE FITNESS",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "08:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040199",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "08:00:00",
+              "endTime": "08:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "HRX WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            },
+            {
+              "id": "7143872",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "08:00:00",
+              "endTime": "08:50:00",
+              "workoutId": 8,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BOXING BAG WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "08:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040201",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "08:30:00",
+              "endTime": "09:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "EVOLVE YOGA",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "09:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7143873",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "09:00:00",
+              "endTime": "09:50:00",
+              "workoutId": 8,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "BOXING BAG WORKOUT",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            },
+            {
+              "id": "7040202",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "09:00:00",
+              "endTime": "09:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 0,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "SEAT_NOT_AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "09:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040204",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "09:30:00",
+              "endTime": "10:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "10:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040205",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "10:00:00",
+              "endTime": "10:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "10:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040206",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "10:30:00",
+              "endTime": "11:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "EVOLVE YOGA",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "11:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7143780",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "11:00:00",
+              "endTime": "11:50:00",
+              "workoutId": 66,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "BURN",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "11:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040208",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "11:30:00",
+              "endTime": "12:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "16:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040209",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "16:30:00",
+              "endTime": "17:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040210",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "17:00:00",
+              "endTime": "17:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "17:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040211",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "17:30:00",
+              "endTime": "18:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040212",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "18:00:00",
+              "endTime": "18:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "18:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040213",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "18:30:00",
+              "endTime": "19:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "EVOLVE YOGA",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040214",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "19:00:00",
+              "endTime": "19:50:00",
+              "workoutId": 66,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "BURN",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "19:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040215",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "19:30:00",
+              "endTime": "20:20:00",
+              "workoutId": 56,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "DANCE FITNESS",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040216",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "20:00:00",
+              "endTime": "20:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "ADIDAS STRENGTH+",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "20:30:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040217",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "20:30:00",
+              "endTime": "21:20:00",
+              "workoutId": 5,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "EVOLVE YOGA",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        },
+        {
+          "id": "21:00:00",
+          "disableGroup": false,
+          "classes": [
+            {
+              "id": "7040218",
+              "productType": "FITNESS",
+              "date": "2025-08-25",
+              "startTime": "21:00:00",
+              "endTime": "21:50:00",
+              "workoutId": 69,
+              "centerID": 1263,
+              "availableSeats": 2,
+              "workoutName": "HRX WORKOUT",
+              "state": "AVAILABLE",
+              "creditCost": null
+            }
+          ],
+          "nearbyText": ""
+        }
+      ]
+    }
+  ],
+  "addressInfo": {
+    "addressString": "5th floor, Above Croma, VJGC, Datta Mandir Rd, Wakad,, Pune",
+    "city": "Pune",
+    "locality": "Wakad",
+    "latLong": {
+      "lat": 18.59976713,
+      "long": 73.76377935
+    },
+    "mapUrl": "https://maps.app.goo.gl/KDjf18t2j8k6S7Ce9",
+    "pincode": "411057"
+  },
+  "bannerWidget": {
+    "hasTopPadding": true,
+    "hasBottomPadding": false,
+    "hasDividerBelow": true,
+    "bannerRatio": "230:90",
+    "data": [
+      {
+        "id": "attendance",
+        "image": "/image/icons/cult/attendance_instruction_web.png",
+        "action": {
+          "actionType": "SHOW_INFOGRAPHIC_MODAL",
+          "meta": {
+            "imageUrl": "/image/icons/cult/attendance_instruction.png",
+            "closeIconUrl": "/image/icons/cult/cancel-modal.png",
+            "widgets": [
+              {
+                "type": "BULLET",
+                "header": {
+                  "title": "Reach 15 mins early",
+                  "color": "#000000",
+                  "style": {
+                    "fontSize": 22,
+                    "color": "#000000"
+                  }
+                },
+                "items": [
+                  {
+                    "subTitle": "Center manager will check your body temperature, blood oxygen level and status on Aarogya Setu app"
+                  }
+                ],
+                "hideSepratorLines": false,
+                "widgetType": "PRODUCT_LIST_WIDGET",
+                "style": {
+                  "paddingHorizontal": 20
+                }
+              },
+              {
+                "type": "BULLET",
+                "header": {
+                  "title": "Marking attendance",
+                  "color": "#000000",
+                  "style": {
+                    "fontSize": 22,
+                    "color": "#000000"
+                  }
+                },
+                "items": [
+                  {
+                    "subTitle": "QR code appears 20 mins before the class starts"
+                  },
+                  {
+                    "subTitle": "Scan the QR code on attendance tab and move to assigned workout station number"
+                  }
+                ],
+                "hideSepratorLines": false,
+                "widgetType": "PRODUCT_LIST_WIDGET",
+                "style": {
+                  "paddingHorizontal": 20
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "center_facility",
+        "image": "/image/icons/cult/center_facility_banner_web.png",
+        "action": {
+          "actionType": "SHOW_INFOGRAPHIC_MODAL",
+          "meta": {
+            "imageUrl": "/image/icons/cult/workout_kit_v3.png",
+            "closeIconUrl": "/image/icons/cult/cancel-modal.png",
+            "widgets": [
+              {
+                "type": "BULLET",
+                "header": {
+                  "title": "Facilities at your center",
+                  "color": "#000000",
+                  "style": {
+                    "fontSize": 22,
+                    "color": "#000000"
+                  }
+                },
+                "items": [
+                  {
+                    "subTitle": "Workout area is fully sanitised after every class"
+                  },
+                  {
+                    "subTitle": "All equipment like weights, resistance bands are available at centers for your use"
+                  },
+                  {
+                    "subTitle": "Lockers are available at centers to keep valuables"
+                  },
+                  {
+                    "subTitle": "Showers facilities have continued for this center. We will be providing the toiletries, please bring your own towels"
+                  }
+                ],
+                "hideSepratorLines": false,
+                "widgetType": "PRODUCT_LIST_WIDGET",
+                "style": {
+                  "paddingHorizontal": 20
+                }
+              },
+              {
+                "type": "BULLET",
+                "header": {
+                  "title": "We request your support",
+                  "color": "#000000",
+                  "style": {
+                    "fontSize": 22,
+                    "color": "#000000"
+                  }
+                },
+                "items": [
+                  {
+                    "subTitle": "If you are unwell, we recommend staying at home for safety of fellow members and employees"
+                  }
+                ],
+                "hideSepratorLines": false,
+                "widgetType": "PRODUCT_LIST_WIDGET",
+                "style": {
+                  "paddingHorizontal": 20
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "layoutProps": {
+      "bannerWidth": 173,
+      "bannerHeight": 50,
+      "v2": true,
+      "noVerticalPadding": true,
+      "backgroundColor": "#ffffff",
+      "noAutoPlay": true
+    },
+    "maxNumBanners": 4,
+    "edgeToEdge": false,
+    "showDivider": false,
+    "header": {
+      "title": "Safety Guidelines",
+      "titleProps": {
+        "style": {
+          "fontSize": 18
+        }
+      }
+    },
+    "widgetType": "CAROUSEL_WIDGET"
+  }
+}
