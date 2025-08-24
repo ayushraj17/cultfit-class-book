@@ -77,8 +77,8 @@ async function attemptBooking(): Promise<boolean> {
 export async function runBookingJob() {
   cleanupOldLogs();
 
-  const INTERVAL_MS = 30 * 1000; // 30 seconds
-  const MAX_RUNTIME_MS = 2 * 60 * 1000; // 2 minutes
+  const INTERVAL_MS = 60 * 1000; // 60 seconds
+  const MAX_RUNTIME_MS = 7 * 60 * 1000; // 7 minutes
 
   const startTime = Date.now();
   let booked = false;
