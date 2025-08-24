@@ -1,29 +1,7 @@
-[dotenv@17.2.1] injecting env (5) from .env -- tip: ⚙️  override existing env vars with { override: true }
-[dotenv@17.2.1] injecting env (5) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
-[dotenv@17.2.1] injecting env (5) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
-[dotenv@17.2.1] injecting env (5) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
-I am running
-Listening on port 3000
-[dotenv@17.2.1] injecting env (5) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
-I am running
-Listening on port 3000
-[dotenv@17.2.1] injecting env (5) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[23/8/2025, 10:00:00 pm] Starting repeated job at 10:00 PM IST...
 [23/8/2025, 10:00:00 pm] Starting repeated job at 10:00 PM IST...
 [23/8/2025, 10:00:10 pm] Attempt #1
 [23/8/2025, 10:00:10 pm] Fetching cult.fit classes...
-Best slot found: {
-  id: '7143875',
-  productType: 'FITNESS',
-  date: '2025-08-27',
-  startTime: '18:00:00',
-  endTime: '18:50:00',
-  workoutId: 8,
-  centerID: 1263,
-  availableSeats: 2,
-  workoutName: 'BOXING BAG WORKOUT',
-  state: 'AVAILABLE',
-  creditCost: null
-}
 [23/8/2025, 10:00:11 pm] Best slot found: {"id":"7143875","productType":"FITNESS","date":"2025-08-27","startTime":"18:00:00","endTime":"18:50:00","workoutId":8,"centerID":1263,"availableSeats":2,"workoutName":"BOXING BAG WORKOUT","state":"AVAILABLE","creditCost":null}
 [23/8/2025, 10:00:17 pm] Booking successful: {"action":"curefit://orderconfirmation","header":{"title":"Class booked!","subTitle":"Your Cult class for Boxing Bag Workout on Wed, 27 Aug at 06:00 PM at Cult Wakad (Hybrid) is confirmed!","creditsData":null},"body":{"date":"2025-08-27","activityType":"CULT_CLASS","subActivityType":"BOXING BAG WORKOUT","activityName":"Cult class","status":"TODO","title":"Boxing Bag Workout","action":"curefit://cultclass?bookingNumber=CUWKADXI5WSP1LR","userActivityId":"7143875"},"footer":{"title":"You will see this class in your Plan screen on Wednesday"},"vertical":"CULT_FIT","widgets":[{"type":"SMALL","header":{"title":"Next Steps","color":"#000000"},"items":[{"icon":"/image/icons/cult/qrcode.png","subTitle":"Reach 20 minutes early and carry your equipments, phone, mask and water."},{"icon":"/image/icons/cult/qrcode.png","subTitle":"We care for your safety and would not be able to allow you to enter the workout floor if you’ve missed first 5 mins of the warm-up to avoid injuries."},{"icon":"/image/icons/cult/station_number.png","subTitle":"A workout station number will be allotted once attendance is marked. Please proceed to your station for the workout."}],"hideSepratorLines":true,"widgetType":"PRODUCT_LIST_WIDGET"}],"meta":{"isCultUnbound":false}}
 [23/8/2025, 10:00:17 pm] Booking done after 1 attempts. Stopping repeated execution.

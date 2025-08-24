@@ -54,42 +54,36 @@ export function getBestSlot(
 ): ClassItem | null {
   if (!response.classByDateList?.length) return null;
 
-  // Step 1: Get the last day
   const lastDay = response.classByDateList[response.classByDateList.length - 1];
-
-  // Step 2: Collect all classes for the day
   let allClasses: ClassItem[] = lastDay.classByTimeList.flatMap(
     (time) => time.classes
   );
 
-  // Step 3 (optional): Filter available classes only
   if (onlyAvailable) {
     allClasses = allClasses.filter(
       (c) => c.state === "AVAILABLE" && c.availableSeats > 0
     );
   }
 
-  // Step 4: Go through preferred workouts in order
+  // Step 4: Respect BOTH workout priority AND time range priority
   for (const pref of preferredWorkouts) {
-    // Filter classes of this workout
     const workoutFiltered = allClasses.filter((c) =>
       c.workoutName.toLowerCase().includes(pref.toLowerCase())
     );
 
-    // Further filter by time ranges
-    const withinTime = workoutFiltered.filter((c) =>
-      timeRanges.some(
-        (range) => c.startTime >= range.start && c.startTime <= range.end
-      )
-    );
+    // Loop through timeRanges in order
+    for (const range of timeRanges) {
+      const withinTime = workoutFiltered.filter(
+        (c) => c.startTime >= range.start && c.startTime <= range.end
+      );
 
-    if (withinTime.length > 0) {
-      // Sort by earliest time and return first match
-      withinTime.sort((a, b) => a.startTime.localeCompare(b.startTime));
-      return withinTime[0];
+      if (withinTime.length > 0) {
+        // Pick earliest within this range
+        withinTime.sort((a, b) => a.startTime.localeCompare(b.startTime));
+        return withinTime[0];
+      }
     }
   }
 
-  // No slot found
   return null;
 }
