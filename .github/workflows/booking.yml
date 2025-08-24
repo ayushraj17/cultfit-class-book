@@ -11,45 +11,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout github-actions branch
       - name: Checkout github-actions branch
         uses: actions/checkout@v4
         with:
           ref: github-actions
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      # 4️⃣ Build TypeScript
       - name: Build project
         run: npm run build
 
-      - name: Run booking script with retries
+      # 5️⃣ Run booking script with retry every 30s for 2 minutes
+      - name: Run booking script
         run: |
-          node -e "
-          const { runBookingJob } = require('./build/main');
-          const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-          (async () => {
-            const INTERVAL_MS = 30000; // 30 seconds
-            const MAX_RUNTIME_MS = 2 * 60 * 1000; // 2 minutes
-            const startTime = Date.now();
-            let booked = false;
-            let attempts = 0;
-
-            while (!booked && Date.now() - startTime < MAX_RUNTIME_MS) {
-              attempts++;
-              console.log(`Attempt #${attempts}`);
-              booked = await runBookingJob();
-              if (!booked) await sleep(INTERVAL_MS);
-            }
-
-            if (booked) console.log(`Booking completed after ${attempts} attempts.`);
-            else console.log(`Booking not successful after ${attempts} attempts.`);
-          })();
-          "
+          mkdir -p logs
+          node build/main.js
         env:
           CULT_FIT_API_KEY: ${{ secrets.CULT_FIT_API_KEY }}
           CULT_FIT_APP_VERSION: ${{ secrets.CULT_FIT_APP_VERSION }}
@@ -57,14 +43,16 @@ jobs:
           CULT_FIT_DEVICE_ID: ${{ secrets.CULT_FIT_DEVICE_ID }}
           CULT_FIT_CENTER_ID: ${{ secrets.CULT_FIT_CENTER_ID }}
 
-      - name: Cleanup old logs (keep latest 7)
+      # 6️⃣ Cleanup old logs (keep latest 7)
+      - name: Cleanup old logs
         run: |
           mkdir -p logs
           ls -1t logs/booking-*.log | tail -n +8 | xargs -r rm
         shell: bash
 
+      # 7️⃣ Upload logs as artifact
       - name: Upload logs
         uses: actions/upload-artifact@v4
         with:
           name: cultfit-logs
-          path: logs/booking-*.log
+          path: logs/
