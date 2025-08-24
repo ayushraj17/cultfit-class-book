@@ -1,0 +1,70 @@
+name: Book CultFit Slot
+
+on:
+  schedule:
+    # Runs every day at 16:30 UTC = 10:00 PM IST
+    - cron: "30 16 * * *"
+  workflow_dispatch: # allow manual run
+
+jobs:
+  run-booking:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout github-actions branch
+        uses: actions/checkout@v4
+        with:
+          ref: github-actions
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run booking script with retries
+        run: |
+          node -e "
+          const { runBookingJob } = require('./build/main');
+          const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+          (async () => {
+            const INTERVAL_MS = 30000; // 30 seconds
+            const MAX_RUNTIME_MS = 2 * 60 * 1000; // 2 minutes
+            const startTime = Date.now();
+            let booked = false;
+            let attempts = 0;
+
+            while (!booked && Date.now() - startTime < MAX_RUNTIME_MS) {
+              attempts++;
+              console.log(`Attempt #${attempts}`);
+              booked = await runBookingJob();
+              if (!booked) await sleep(INTERVAL_MS);
+            }
+
+            if (booked) console.log(`Booking completed after ${attempts} attempts.`);
+            else console.log(`Booking not successful after ${attempts} attempts.`);
+          })();
+          "
+        env:
+          CULT_FIT_API_KEY: ${{ secrets.CULT_FIT_API_KEY }}
+          CULT_FIT_APP_VERSION: ${{ secrets.CULT_FIT_APP_VERSION }}
+          CULT_FIT_COOKIE: ${{ secrets.CULT_FIT_COOKIE }}
+          CULT_FIT_DEVICE_ID: ${{ secrets.CULT_FIT_DEVICE_ID }}
+          CULT_FIT_CENTER_ID: ${{ secrets.CULT_FIT_CENTER_ID }}
+
+      - name: Cleanup old logs (keep latest 7)
+        run: |
+          mkdir -p logs
+          ls -1t logs/booking-*.log | tail -n +8 | xargs -r rm
+        shell: bash
+
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: cultfit-logs
+          path: logs/

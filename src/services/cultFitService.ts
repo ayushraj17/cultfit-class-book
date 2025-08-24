@@ -90,8 +90,8 @@ export class CultFitService {
         ],
         timeRanges: preferences?.timeRanges || [
           { start: "06:00:00", end: "09:00:00" },
-          { start: "16:00:00", end: "18:30:00" },
           { start: "18:30:00", end: "22:00:00" },
+          { start: "16:00:00", end: "18:30:00" },
         ],
       });
 

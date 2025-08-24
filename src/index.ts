@@ -1,6 +1,6 @@
+// main.ts
 import fs from "fs";
 import path from "path";
-import nodeCron from "node-cron";
 import { env } from "./config/env";
 import { CultFitService } from "./services/cultFitService";
 
@@ -10,18 +10,15 @@ env.validate();
 const LOG_DIR = path.resolve("./logs");
 const LOG_RETENTION_DAYS = 7;
 
-// Ensure log directory exists
 if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
 
-// Generate daily log file path
 function getLogFilePath() {
   const date = new Date().toLocaleDateString("en-CA", {
     timeZone: "Asia/Kolkata",
-  }); // YYYY-MM-DD
+  });
   return path.join(LOG_DIR, `booking-${date}.log`);
 }
 
-// Log to console and file
 function log(message: string) {
   const timestamp = new Date().toLocaleString("en-IN", {
     timeZone: "Asia/Kolkata",
@@ -31,7 +28,6 @@ function log(message: string) {
   fs.appendFileSync(getLogFilePath(), finalMessage + "\n");
 }
 
-// Cleanup old logs beyond retention period
 function cleanupOldLogs() {
   const files = fs.readdirSync(LOG_DIR);
   const now = Date.now();
@@ -49,7 +45,7 @@ function cleanupOldLogs() {
   });
 }
 
-async function main(): Promise<boolean> {
+async function attemptBooking(): Promise<boolean> {
   try {
     log("Fetching cult.fit classes...");
     const bestSlot = await CultFitService.findAndBookBestSlot();
@@ -68,45 +64,46 @@ async function main(): Promise<boolean> {
       );
       log(`Booking successful: ${JSON.stringify(bookingResponse)}`);
       return true;
-    } catch (bookingError) {
-      log(`Booking failed: ${bookingError}`);
+    } catch (err) {
+      log(`Booking failed: ${err}`);
       return false;
     }
-  } catch (error) {
-    log(`Error in main process: ${error}`);
+  } catch (err) {
+    log(`Error in main process: ${err}`);
     return false;
   }
 }
 
-// Schedule cron at 10:00 PM IST daily
-nodeCron.schedule(
-  "0 22 * * *",
-  () => {
-    cleanupOldLogs(); // remove old logs
-    log("Starting repeated job at 10:00 PM IST...");
+export async function runBookingJob() {
+  cleanupOldLogs();
 
-    let attemptCount = 0;
+  const INTERVAL_MS = 30 * 1000; // 30 seconds
+  const MAX_RUNTIME_MS = 2 * 60 * 1000; // 2 minutes
 
-    const intervalId = setInterval(async () => {
-      attemptCount++;
-      log(`Attempt #${attemptCount}`);
-      const isBooked = await main();
+  const startTime = Date.now();
+  let booked = false;
+  let attempts = 0;
 
-      if (isBooked) {
-        log(
-          `Booking done after ${attemptCount} attempts. Stopping repeated execution.`
-        );
-        clearInterval(intervalId);
-        clearTimeout(timeoutId);
-      }
-    }, 10000); // every 10 seconds
+  while (!booked && Date.now() - startTime < MAX_RUNTIME_MS) {
+    attempts++;
+    log(`Attempt #${attempts}`);
+    booked = await attemptBooking();
 
-    const timeoutId = setTimeout(() => {
-      log(
-        `Max runtime reached after ${attemptCount} attempts. Stopping repeated execution.`
-      );
-      clearInterval(intervalId);
-    }, 5 * 60 * 1000); // max 5 minutes
-  },
-  { timezone: "Asia/Kolkata" }
-);
+    if (!booked) {
+      await new Promise((r) => setTimeout(r, INTERVAL_MS));
+    }
+  }
+
+  if (!booked) {
+    log(`Booking not successful after ${attempts} attempts. Exiting.`);
+  } else {
+    log(`Booking completed after ${attempts} attempts.`);
+  }
+
+  return booked;
+}
+
+// Run directly if executed
+if (require.main === module) {
+  runBookingJob();
+}
