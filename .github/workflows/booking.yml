@@ -35,7 +35,7 @@ jobs:
       - name: Run booking script
         run: |
           mkdir -p logs
-          node build/main.js
+          node build/index.js
         env:
           CULT_FIT_API_KEY: ${{ secrets.CULT_FIT_API_KEY }}
           CULT_FIT_APP_VERSION: ${{ secrets.CULT_FIT_APP_VERSION }}
