@@ -196,4 +196,4 @@ Open source – adapt freely.
 
 Contact
 
-Email: meaysuhraj17@gmail.com
+Email: meayushraj17@gmail.com
