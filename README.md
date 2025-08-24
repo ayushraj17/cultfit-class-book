@@ -1,23 +1,12 @@
-CultFit Class Booker
+# CultFit Class Booking Automation
 
-Automated booking script to secure CultFit class slots every day at a scheduled time using Node.js + TypeScript and GitHub Actions.
+Automates booking classes at CultFit using Node.js and TypeScript, with retry logic and logging. Can be scheduled via GitHub Actions.
 
-⸻
+---
 
-Overview
+## Repository Structure
 
-This app:
-	•	Interfaces with CultFit API to book classes automatically.
-	•	Uses embedded slot selection logic in CultFitService.findAndBookBestSlot().
-	•	Retries booking every 1 minute for up to 2 minutes.
-	•	Logs attempts and outcomes into timestamped files.
-	•	Cleans up logs older than 7 days.
-	•	Runs daily via GitHub Actions (around 10:00 PM IST).
-
-⸻
-
-Repository Structure
-
+```
 /
 ├─ .github/
 │  └─ workflows/
@@ -30,170 +19,104 @@ Repository Structure
 ├─ tsconfig.json
 ├─ .env.example              # Template for environment variables
 └─ README.md
+```
 
+## Features
 
-⸻
+* Automatically fetches and books classes at CultFit.
+* Retry mechanism every 1 minute until booked or for 2 minutes max.
+* Logs all attempts to a timestamped file.
+* Cleans up logs older than 7 days.
+* Can run automatically via GitHub Actions.
 
-Best Slot Selection Logic
+## Environment Variables
 
-The logic is embedded in:
+Create a `.env` file or use GitHub Secrets:
 
-// src/services/cultFitService.ts
-export class CultFitService {
-  static async findAndBookBestSlot() {
-    // 1. Fetch all available slots for the given center
-    // 2. Apply preference logic (time, availability, capacity)
-    // 3. Pick the most suitable slot
-    // 4. Attempt booking via CultFit API
-    // 5. Return success/failure
-  }
-}
+```
+CULT_FIT_API_KEY=your_api_key
+CULT_FIT_APP_VERSION=7
+CULT_FIT_COOKIE=your_cookie
+CULT_FIT_DEVICE_ID=device_id
+CULT_FIT_CENTER_ID=center_id
+```
 
-	•	Adjustments to workout preferences or time ranges can be done directly in this method.
-	•	The method returns the best slot and handles API booking.
+## Setup
 
-⸻
+1. Clone the repository:
 
-Getting Started (Local)
-	1.	Clone the repo:
-
+```bash
 git clone https://github.com/ayushraj17/cultfit-class-book.git
 cd cultfit-class-book
+```
 
-	2.	Copy .env.example → .env and add your credentials:
+2. Install dependencies:
 
-CULT_FIT_API_KEY=...
-CULT_FIT_APP_VERSION=...
-CULT_FIT_COOKIE=...
-CULT_FIT_DEVICE_ID=...
-CULT_FIT_CENTER_ID=...
-
-	3.	Install dependencies:
-
+```bash
 npm install
+```
 
-	4.	Build & run locally:
+3. Build the project:
 
+```bash
 npm run build
+```
+
+4. Run locally:
+
+```bash
 node build/index.js
+```
 
-Logs will appear in:
+## GitHub Actions Setup
 
-./logs/booking-YYYY-MM-DD.log
+1. Push this repository to a branch `github-actions`.
+2. Add secrets for your environment variables in GitHub repository settings.
+3. Workflow `.github/workflows/book-cultfit.yml` triggers the script daily or manually.
 
+### Sample Workflow Logic
 
-⸻
+* Checkout `github-actions` branch
+* Install Node.js and dependencies
+* Build TypeScript
+* Run booking script every 1 minute until booked or 2 minutes max
+* Cleanup old logs
+* Upload logs as artifact
 
-GitHub Actions Setup
+## `getBestSlot` Logic
 
-1. Add Secrets
+Inside `cultFitService.ts`, the function `getBestSlot`:
 
-Go to Settings → Secrets and variables → Actions → New repository secret and add:
-	•	CULT_FIT_API_KEY
-	•	CULT_FIT_APP_VERSION
-	•	CULT_FIT_COOKIE
-	•	CULT_FIT_DEVICE_ID
-	•	CULT_FIT_CENTER_ID
+```ts
+function getBestSlot(response, { preferredWorkouts, timeRanges, onlyAvailable = true }) {
+  if (!response.classByDateList?.length) return null;
 
-⸻
+  const lastDay = response.classByDateList[response.classByDateList.length - 1];
+  let allClasses = lastDay.classByTimeList.flatMap(t => t.classes);
 
-2. Workflow Example
+  if (onlyAvailable) {
+    allClasses = allClasses.filter(c => c.state === 'AVAILABLE' && c.availableSeats > 0);
+  }
 
-Create .github/workflows/book-cultfit.yml:
+  for (const pref of preferredWorkouts) {
+    const workoutFiltered = allClasses.filter(c => c.workoutName.toLowerCase().includes(pref.toLowerCase()));
+    const withinTime = workoutFiltered.filter(c => timeRanges.some(r => c.startTime >= r.start && c.startTime <= r.end));
+    if (withinTime.length) {
+      withinTime.sort((a, b) => a.startTime.localeCompare(b.startTime));
+      return withinTime[0];
+    }
+  }
+  return null;
+}
+```
 
-name: CultFit Auto Booker
+This respects workout preferences and optional time ranges.
 
-on:
-  schedule:
-    - cron: "25 16 * * *" # Runs daily at 9:55 PM IST (16:25 UTC)
-  workflow_dispatch:       # Manual trigger
+## Logs
 
-jobs:
-  book-class:
-    runs-on: ubuntu-latest
+* Stored in `/logs` with format `booking-YYYY-MM-DD.log`.
+* Automatically cleaned up if older than 7 days.
 
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-        with:
-          ref: github-actions  # Run workflow on this branch
+## License
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Build Project
-        run: npm run build
-
-      - name: Run Booking Script
-        run: node build/index.js
-        env:
-          CULT_FIT_API_KEY: ${{ secrets.CULT_FIT_API_KEY }}
-          CULT_FIT_APP_VERSION: ${{ secrets.CULT_FIT_APP_VERSION }}
-          CULT_FIT_COOKIE: ${{ secrets.CULT_FIT_COOKIE }}
-          CULT_FIT_DEVICE_ID: ${{ secrets.CULT_FIT_DEVICE_ID }}
-          CULT_FIT_CENTER_ID: ${{ secrets.CULT_FIT_CENTER_ID }}
-
-      - name: Upload Logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: cultfit-logs
-          path: logs/
-
-
-⸻
-
-3. Execution
-	•	Workflow starts automatically via schedule or manually via Actions → Run workflow.
-	•	Script retries internally every 1 minute for up to 2 minutes.
-	•	Stops immediately if booking succeeds or if API returns an error (e.g., 400/500).
-
-⸻
-
-Logs
-	•	Daily logs stored in logs/booking-YYYY-MM-DD.log.
-	•	Logs older than 7 days are automatically cleaned.
-	•	GitHub Actions uploads logs as artifacts for each run.
-
-⸻
-
-Modifying Preferences
-
-If you want to change preferred time ranges or workouts, edit findAndBookBestSlot() in CultFitService:
-
-const preferredWorkouts = ["Boxing", "Strength"];
-const preferredTimeRanges = [
-  { start: "16:00:00", end: "18:00:00" },
-  { start: "18:00:00", end: "22:00:00" }
-];
-
-	•	Order matters: the first matching slot in this priority order will be selected.
-	•	Adjust as needed for your schedule or desired workouts.
-
-⸻
-
-Troubleshooting
-	•	Ensure .env secrets are valid.
-	•	Check logs/ or GitHub Action Artifacts for errors.
-	•	On module or build errors, run:
-
-npm install
-npm run build
-
-	•	Workflow runs on the github-actions branch. Ensure this branch exists.
-
-⸻
-
-License
-
-Open source – adapt freely.
-
-⸻
-
-Contact
-
-Email: meayushraj17@gmail.com
+MIT
