@@ -2,8 +2,10 @@ name: Book CultFit Slot
 
 on:
   schedule:
-    # Runs every day at 16:30 UTC = 10:00 PM IST
-    - cron: "30 16 * * *"
+    # # Runs every day at 16:30 UTC = 10:00 PM IST
+    # - cron: "30 16 * * *"
+    # 🔥 TEMP: Runs once in the next 5 minutes (adjust UTC minute accordingly)
+    - cron: "*/5 * * * *"  # every 5 minutes (remove after test)
   workflow_dispatch: # allow manual run
 
 jobs:
