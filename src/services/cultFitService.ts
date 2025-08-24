@@ -72,7 +72,7 @@ export class CultFitService {
       return await response.json();
     } catch (error) {
       console.error("Error booking class:", error);
-      throw error;
+      process.exit(1); // Exit workflow with failure
     }
   }
 
