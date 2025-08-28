@@ -103,7 +103,26 @@ export async function runBookingJob() {
   return booked;
 }
 
+// Wait until exactly 16:30:00 UTC before running
+async function waitUntilTargetTime() {
+  const now = new Date();
+  const target = new Date(now);
+  target.setUTCHours(16, 30, 0, 0);
+
+  if (now > target) {
+    log("Target time already passed, running immediately.");
+    return;
+  }
+
+  const delay = target.getTime() - now.getTime();
+  log(`Waiting ${delay / 1000}s until 16:30:00 UTC...`);
+  await new Promise((resolve) => setTimeout(resolve, delay));
+}
+
 // Run directly if executed
 if (require.main === module) {
-  runBookingJob();
+  (async () => {
+    await waitUntilTargetTime();
+    await runBookingJob();
+  })();
 }
