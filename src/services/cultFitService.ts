@@ -76,24 +76,17 @@ export class CultFitService {
     }
   }
 
-  static async findAndBookBestSlot(preferences?: {
-    preferredWorkouts?: PreferredWorkout[];
-    timeRanges?: { start: string; end: string }[];
+  static async findAndBookBestSlot(preferences: {
+    preferredWorkouts: PreferredWorkout[];
+    timeRanges: { start: string; end: string }[];
   }) {
     try {
       const responseData = await this.fetchClasses();
 
       const bestSlot = getBestSlot(responseData, {
         onlyAvailable: false,
-        preferredWorkouts: preferences?.preferredWorkouts || [
-          PreferredWorkout.Boxing,
-        ],
-        timeRanges: preferences?.timeRanges || [
-          { start: "8:00:00", end: "10:00:00" },
-          { start: "18:30:00", end: "22:00:00" },
-          { start: "06:00:00", end: "09:00:00" },
-          { start: "16:00:00", end: "18:30:00" },
-        ],
+        preferredWorkouts: preferences.preferredWorkouts,
+        timeRanges: preferences.timeRanges,
       });
 
       if (!bestSlot) {

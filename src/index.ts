@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import { env } from "./config/env";
 import { CultFitService } from "./services/cultFitService";
+import { TIME_RANGE, WORKOUTS } from "./config/constants";
+import { PreferredWorkout } from "./helpers";
 
 // Initialize environment
 env.validate();
@@ -48,7 +50,10 @@ function cleanupOldLogs() {
 async function attemptBooking(): Promise<boolean> {
   try {
     log("Fetching cult.fit classes...");
-    const bestSlot = await CultFitService.findAndBookBestSlot();
+    const bestSlot = await CultFitService.findAndBookBestSlot({
+      timeRanges: TIME_RANGE,
+      preferredWorkouts: WORKOUTS,
+    });
 
     if (!bestSlot) {
       log("No suitable slot found for booking.");
